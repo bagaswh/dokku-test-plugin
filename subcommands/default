@@ -15,6 +15,7 @@ cmd-hello-default() {
   declare APP="$1"
 
   [[ -z "$APP" ]] && dokku_log_fail "Please specify an app to run the command on"
+  echo "Verifying app name $APP"
   verify_app_name "$APP"
 
   echo "Hello $APP"
